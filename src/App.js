@@ -1,23 +1,25 @@
 import logo from './logo.svg';
 import './App.css';
+import { Navbar } from './components/Navbar/Navbar';
+import ItemList from './components/ItemList/ItemList';
+import Counter from './components/Counter/Counter';
+
+
 
 function App() {
+
+let saludo = "hola juancito como estas?"
+let edad = 25
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+      <ItemList saludo={saludo} edad={edad} />
+     <Counter />
+    
+      
+     
     </div>
   );
 }
