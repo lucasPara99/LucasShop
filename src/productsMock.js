@@ -23,7 +23,7 @@ export const products = [
         title: "Honda",
         price: 4500000,
         stock: 3,
-        description: "Vehiculo mecanico ideal para andar por la ciudad.",
+        description: "Vehiculo mediano ideal para andar por la ciudad.",
         category: "nuevos",
         img: "https://tse3.mm.bing.net/th?id=OIP.b0DQapeZUrubRv_Lhf9OpQHaEc&pid=Api&P=0"
     },

@@ -1,8 +1,10 @@
 import React from "react";
 import styles from "./ItemDetail.module.css";
 import { Link } from "react-router-dom";
+import { Button } from "@mui/material";
 
 import CounterContainer from "../Counter/CounterContainer";
+
 export const ItemDetail = ({ product, onAdd }) => {
   return (
     <div>
