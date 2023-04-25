@@ -1,17 +1,24 @@
  //import "./Navbar.css"
 
- import CartWidget from "../CartWidget/CartWidget"
-import styles from "./Navbar.module.css"
+ import CartWidget from "../CartWidget/CartWidget";
+ import styles from "./Navbar.module.css";
+ import { Outlet, Link } from "react-router-dom";
  
- export const Navbar = ()=>{
-    return <div className={styles.containerNavbar}>
-
-        <h3>Lucas Shop</h3>
-        <ul>
-            <li>Productos</li>
-            <li>Servicios</li>
-            <li>Contactos</li>
-        </ul>
-        <CartWidget />
-    </div>
-}
+ export const Navbar = () => {
+   return (
+     <div>
+       <div className={styles.containerNavbar}>
+         <Link to="/">LucasShop</Link>
+          <div className={styles.categories}>
+           <Link to="/">Todos</Link>
+           <Link to="/category/usados">usados</Link>
+           <Link to="/category/nuevos">nuevos</Link>
+         </div>
+ 
+         <CartWidget />
+       </div>
+ 
+       <Outlet />
+     </div>
+   );
+ };

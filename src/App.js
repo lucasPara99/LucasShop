@@ -1,26 +1,25 @@
 import logo from './logo.svg';
-import './App.css';
-import { Navbar } from './components/Navbar/Navbar';
-import ItemList from './components/ItemList/ItemList';
-import Counter from './components/Counter/Counter';
-
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ItemListContainer from "./components/ItemList/ItemListContainer";
+import { ItemDetailContainer } from "./components/ItemDetail/ItemDetailContainer";
+import { Navbar } from "./components/Navbar/Navbar";
+import CartContainer from "./components/Cart/CartContainer";
+import Form from "./components/Form/Form";
 
 function App() {
-
-let saludo = "hola juancito como estas?"
-let edad = 25
-
-
   return (
-    <div className="App">
-      <Navbar />
-      <ItemList saludo={saludo} edad={edad} />
-     <Counter />
-    
-      
-     
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route element={<Navbar />}>
+          <Route path="/" element={<ItemListContainer />} />
+          <Route path="/category/:categoryName" element={<ItemListContainer />} />
+          <Route path="/itemDetail/:id" element={<ItemDetailContainer />} />
+          <Route path="/cart" element={ <CartContainer /> } />
+          <Route path="/form" element={<Form />} />
+          <Route path="*" element={<h1>La ruta no existe</h1>} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
