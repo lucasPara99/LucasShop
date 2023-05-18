@@ -17,15 +17,13 @@ const Form = () => {
   const envioDeFormulario = (evento)=>{
     evento.preventDefault()
     
-  
-    console.log(userData)
 
   }
   
 
   return (
     <div>
-      <h1>Estamos en el formulario</h1>
+      <h1>Formulario</h1>
 
       <form onSubmit={envioDeFormulario}>
         <input

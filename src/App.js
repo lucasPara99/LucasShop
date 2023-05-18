@@ -5,11 +5,14 @@ import { ItemDetailContainer } from "./components/ItemDetail/ItemDetailContainer
 import { Navbar } from "./components/Navbar/Navbar";
 import CartContainer from "./components/Cart/CartContainer";
 import Form from "./components/Form/Form";
+import CartContextProvider from './context/CartContext';
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
+   
+     <BrowserRouter>
+     <CartContextProvider>
+     <Routes>
         <Route element={<Navbar />}>
           <Route path="/" element={<ItemListContainer />} />
           <Route path="/category/:categoryName" element={<ItemListContainer />} />
@@ -19,7 +22,11 @@ function App() {
           <Route path="*" element={<h1>La ruta no existe</h1>} />
         </Route>
       </Routes>
+
+     </CartContextProvider>
+     
     </BrowserRouter>
+   
   );
 }
 
