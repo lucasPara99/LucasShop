@@ -27,7 +27,7 @@ export const Navbar = () => {
   return (
     <div>
       <div className={styles.containerNavbar}>
-        <Link to="/">Comision 39650</Link>
+        <Link to="/">Lucas Shop</Link>
 
         <div className={styles.categories}>
           {categories.map((category) => {
