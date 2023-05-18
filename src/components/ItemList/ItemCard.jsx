@@ -15,6 +15,7 @@ const ItemCard = ({ item }) => {
   return (
     <Card sx={{ width: 345, height: 350 }}>
       <CardMedia sx={{ height: 140 }} image={item.img} title="green iguana" />
+      
       <CardContent sx={{ height: 150 }}>
         <Typography
           gutterBottom
@@ -24,13 +25,17 @@ const ItemCard = ({ item }) => {
         >
           {item.title}
         </Typography>
+        
         <Typography variant="h6" color="text.secondary" textAlign={"center"}>
           {item.description}
         </Typography>
+        
         <Typography variant="subtitle1" textAlign={"center"}>
           ${item.price}.-
         </Typography>
       </CardContent>
+      
+      
       <CardActions style={{ display: "flex", justifyContent: "center" }}>
         <Link to={`/itemDetail/${item.id}`}>
           <Button variant="contained"

@@ -24,7 +24,7 @@ export const ItemDetailContainer = () => {
           id: res.id,
         })
       )
-      .catch((err) => console.log(err));
+      ;
   }, [id]);
 
   const onAdd = (cantidad) => {

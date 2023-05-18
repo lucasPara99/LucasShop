@@ -35,8 +35,6 @@ const FetchingData = () => {
     })
   }
 
-  console.log(data);
-  console.log(dataById);
 
   return (
     <div>

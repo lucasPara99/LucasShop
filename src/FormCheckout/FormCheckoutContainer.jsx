@@ -67,7 +67,7 @@ export const FormCheckoutContainer = () => {
       {orderId ? (
         <h3>
           Gracias por tu compra el numero de compra es {orderId}, por favor
-          guardalo para cualquier cosa
+          guardalo.
         </h3>
       ) : (
         <FormCheckout

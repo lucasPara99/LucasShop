@@ -29,7 +29,7 @@ const ItemListContainer = () => {
     getDocs(consulta)
       .then((res) => {
         const products = res.docs.map((product) => {
-          // console.log(product.data(), product.id)
+          
           return {
             ...product.data(),
             id: product.id,
@@ -38,7 +38,7 @@ const ItemListContainer = () => {
 
         setItems(products);
       })
-      .catch((err) => console.log(err));
+      ;
   }, [categoryName]);
 
   return (
